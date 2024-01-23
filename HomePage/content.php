@@ -35,8 +35,14 @@
             <div class="isi2">
                 <img src="">
                 <div class ="list">
-                    <h1>Tempat Dimana Anda Mencari Pasangan Sejati!</h1>
+                    <h1>Tempat Dimana Anda Mencari Pasangan Sejati</h1>
                     <p>Dengan Bekerja di perusahaan kami, tidak hanya anda mendapat karir yang sesuai dengan passion anda, tetapi mencari passangan yang ideal untuk anda</p>
+                </div>
+                <div class="isi3">
+                <img src="">
+                <div class ="list">
+                    <h1>Karir yang bagus, adalah kunci kesuksesab</h1>
+                    <p>lorem ipsum</p>
                 </div>
         </div>
     </main>
