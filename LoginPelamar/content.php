@@ -24,26 +24,18 @@
         </nav>
     </header>
     <main class="isiweb">
-        <div class="content">
-            <div class="isi1">
-                <img src="">
-                <div class ="list">
-                    <h1>Mari Bergabung Dengan Kami!</h1>
-                    <p>Berkarir di perusahaan kami, adalah suatu kesempatan yg luar biasa yang akan anda alami selama anda berkarir.</p>
-                </div>
-            </div>
-            <div class="isi2">
-                <img src="">
-                <div class ="list">
-                    <h1>Tempat Dimana Anda Mencari Pasangan Sejati</h1>
-                    <p>Dengan Bekerja di perusahaan kami, tidak hanya anda mendapat karir yang sesuai dengan passion anda, tetapi mencari passangan yang ideal untuk anda</p>
-                </div>
-                <div class="isi3">
-                <img src="">
-                <div class ="list">
-                    <h1>Karir yang bagus, adalah kunci kesuksesan</h1>
-                    <p>lorem ipsum</p>
-                </div>
+        <div class="center">
+            <form id="form" >
+                <p>Email</p>
+                <input type="email" id="email" >
+                <p calss="error-symbol" id="emerr"></p>
+                <p>Password</p>
+                <input type="password" id="pass" >
+                <p class="error-symbol" id="errmess"hidden></p>
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember me</label>
+                <button type="button" onclick="validateForm()"> Submit </button>
+            </form>
         </div>
     </main>
         <footer>
