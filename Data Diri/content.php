@@ -14,13 +14,6 @@
     <div class="container">
         <h2>Form Data Diri</h2>
         <form action="process.php" method="post">
-
-            <label for="posisi_pilihan">Role:</label>
-        <select id="posisi_pilihan" name="posisi_pilihan" required>
-            <option value="" disabled selected>-- Pilih Posisi --</option>
-            <option value="posisi1">Rekruter</option>
-            <option value="posisi2">Pelamar</option>
-        </select> 
             <label for="nama">Nama:</label>
             <input type="text" id="nama" name="nama" required>
 
