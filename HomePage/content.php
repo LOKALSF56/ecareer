@@ -1,14 +1,14 @@
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
     </head>
+    
     <body>
     <header>
-    <h1 class="logo"> PT. Mencari Cinta Sejati</h1>
         <nav class="nav-container">
             <ul class="kiri">
-                <li><a class="home" href="#">Home</a></li>
+            <li class="Logo">PT Mencari Cinta Sejati</li>
                 <li><a class="hitam" href="#">Lowongan</a></li>
                 <li><a class="hitam" href="#">Pengumuman</a></li>
             </ul>
@@ -16,36 +16,34 @@
                 <li>
                     <a href="#">Akun</a>
                     <ul class="dropdown">
-                        <li><a class="Login" href="#">Login</a></li>
-                        <li><a class="Regis" href="#">Mendaftar</a></li>
+                        <li><a class="hitam" href="#">Login</a></li>
+                        <li><a class="hitam" href="#">Mendaftar</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="isiweb">
-        <div class="content">
-            <div class="isi1">
-                <img src="">
-                <div class ="list">
-                    <h1>Mari Bergabung Dengan Kami!</h1>
-                    <p>Berkarir di perusahaan kami, adalah suatu kesempatan yg luar biasa yang akan anda alami selama anda berkarir.</p>
+    <main>
+        <section class="carausell">
+            <div class="img-list" id="img-list">
+                <img src="../Image/1.jpg">
+                <img src="../Image/c2.jpg">
+                <img src="../Image/cc3.jpg">
+            </div>
+            <div class="content">
+                <div class="text-content">
+                    <h2>Berkarirlah Bersama Kami!</h2>
+                    <p>Lorem ipsum dolor sir amet,consectur asispicing elit. Aliquam</p>
                 </div>
             </div>
-            <div class="isi2">
-                <img src="">
-                <div class ="list">
-                    <h1>Tempat Dimana Anda Mencari Pasangan Sejati</h1>
-                    <p>Dengan Bekerja di perusahaan kami, tidak hanya anda mendapat karir yang sesuai dengan passion anda, tetapi mencari passangan yang ideal untuk anda</p>
-                </div>
-                <div class="isi3">
-                <img src="">
-                <div class ="list">
-                    <h1>Karir yang bagus, adalah kunci kesuksesan</h1>
-                    <p>lorem ipsum</p>
-                </div>
-        </div>
+            <div class="btn-sec">
+                <div class="btn-slide" onclick="slideImg(0)"></div>
+                <div class="btn-slide" onclick="slideImg(1)"></div>
+                <div class="btn-slide" onclick="slideImg(2)"></div>
+            </div>
+        </section>
     </main>
+    <script src="script.js"></script>
         <footer>
             <p>Copyright @ 2024 PT Mencari Cinta Sejati, Designed by Kelompok 6 Pweb</p>
         </footer>
