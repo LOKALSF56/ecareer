@@ -3,8 +3,24 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
     </head>
-    
     <body>
+    <?php
+    include "../koneksiDB/koneksi.php";
+    function select($query)
+    {
+        //konek ke db
+        global $conn;
+        $result = mysqli_query($conn, $query);
+        $rows = [];
+    
+        while ($row = mysqli_fetch_assoc($result))
+        {
+            $rows[] = $row; // Fix variable name here from $rows to $row
+        }
+        return $rows;
+    }
+    $list_loker =select("SELECT * FROM `loker`");
+    ?>
     <header>
         <nav class="nav-container">
             <ul class="kiri">
@@ -26,9 +42,9 @@
     <main>
         <section class="carausell">
             <div class="img-list" id="img-list">
-                <img src="../Image/1.jpg">
-                <img src="../Image/c2.jpg">
-                <img src="../Image/cc3.jpg">
+                <img src="../Image/1.jpg" class ="1">
+                <img src="../Image/2.jpg" class ="2"
+>                <img src="../Image/3.jpg" class ="3">
             </div>
             <div class="content">
                 <div class="text-content">
@@ -43,6 +59,29 @@
             </div>
         </section>
     </main>
+    <table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Lowongan</th>
+            <th>Deksripsi</th>
+            <th>Opsi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $no = 1; ?>
+        <?php foreach ($list_loker as $loker): ?>
+            <tr>
+                <td><?= $no++; ?></td>
+                <td><?= $loker["NAMA_Loker"]; ?></td>
+                <td><?= $loker["Desc_Loker"]; ?></td>
+                <td>
+                    <input class="Lamar" type="button" value="Lamar">
+                </td>
+            </tr>
+         <?php endforeach; ?>
+
+</table>
     <script src="script.js"></script>
         <footer>
             <p>Copyright @ 2024 PT Mencari Cinta Sejati, Designed by Kelompok 6 Pweb</p>
