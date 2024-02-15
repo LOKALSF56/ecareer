@@ -13,7 +13,7 @@
 
     <div class="container">
         <h2>Form Data Diri</h2>
-        <form action="process.php" method="post">
+        <form>
             <label for="nama">Nama:</label>
             <input type="text" id="nama" name="nama" required>
 
