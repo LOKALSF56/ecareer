@@ -42,7 +42,7 @@
     <main>
         <section class="carausell">
             <div class="img-list" id="img-list">
-                <img src="../Image/1.jpg" class ="1">
+                <img src="../Image/2.jpg" class ="1">
                 <img src="../Image/2.jpg" class ="2"
 >                <img src="../Image/3.jpg" class ="3">
             </div>

@@ -5,9 +5,9 @@
     </head>
     <body>
     <header>
-    <h1 class="logo"> PT. Mencari Cinta Sejati</h1>
         <nav class="nav-container">
             <ul class="kiri">
+            <li class="Logo">PT Mencari Cinta Sejati</li>
                 <li><a class="home" href="#">Home</a></li>
                 <li><a class="hitam" href="#">Lowongan</a></li>
                 <li><a class="hitam" href="#">Pengumuman</a></li>
@@ -23,21 +23,52 @@
             </ul>
         </nav>
     </header>
-    <main class="isiweb">
-        <div class="center">
-            <form id="form" >
-                <p>Email</p>
-                <input type="email" id="email" >
-                <p calss="error-symbol" id="emerr"></p>
-                <p>Password</p>
-                <input type="password" id="pass" >
-                <p class="error-symbol" id="errmess"hidden></p>
+    <div class ="center">
+        <form action="content.php" method="POST">
+            <h2>Login</h2>
+            <?php
+                include "../koneksiDB/koneksi.php";
+                session_start();
+                if(isset($_SESSION["is_login"]))
+                {
+                header('Location: ../HomePage/content.php');   
+                }
+                if(isset($_POST["login"]))
+                {
+                    $password = $_POST["password"];
+                    $username = $_POST["email"];
+                    
+                    $sql = "SELECT * FROM `datadiri` WHERE email='$username' AND password='$password'";
+                    $result = $conn->query($sql);
+                    if($result->num_rows>0)
+                    {
+                        $data = $result->fetch_assoc();
+                        header('Location: ../HomePage/content.php');
+                        $_SESSION["email"] =$data["email
+                        "];
+                        $_SESSION["is_login"] = true;
+                    }
+                    else
+                    {
+                        echo"email atau password tidak ada!";
+                    }
+                    $conn->close();
+                }?>
+                <div class="txt_field">
+                    <input type="email" name="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <label for="rememberMe">Tetap Masuk:</label>
                 <input type="checkbox" id="rememberMe" name="rememberMe">
-                <label for="rememberMe">Remember me</label>
-                <button type="button" onclick="validateForm()"> Submit </button>
-                <a class="forgotpass" href="#">Lupa Password?</a>
+                <button type="submit" value="login" name="login" >Login</button>
             </form>
-        </div>
+    </div>
     </main>
         <footer>
             <p>Copyright @ 2024 PT Mencari Cinta Sejati, Designed by Kelompok 6 Pweb</p>
