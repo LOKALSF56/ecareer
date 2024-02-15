@@ -13,7 +13,7 @@
 
     <div class="container">
         <h2>Form Data Diri</h2>
-        <form action="process.php" method="post">
+        <form method="POST" action="proses.php" enctype="multipart/form-data">
             <label for="nama">Nama:</label>
             <input type="text" id="nama" name="nama" required>
 
@@ -53,5 +53,6 @@
     </footer>
 
 </body>
+
 
 </html>
