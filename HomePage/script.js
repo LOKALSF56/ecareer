@@ -1,18 +1,26 @@
-let currentIndex = 0;
-const imgList = document.getElementById("img-list");
-const totalImages = document.querySelectorAll(".img-list img").length;
+document.addEventListener("DOMContentLoaded", function () {
+    const imgList = document.getElementById("img-list");
+    const btnSlides = document.querySelectorAll(".btn-slide");
 
-function slideImg(index) {
-    currentIndex = index;
-    updateSlide();
-}
+    let currentSlide = 0;
 
-function updateSlide() {
-    const translateValue = -currentIndex * 100 + '%';
-    imgList.style.transform = 'translateX(' + translateValue + ')';
-}
+    function showSlide(index) {
+        imgList.style.transform = `translateX(-${index * 100}%)`;
+        currentSlide = index;
+    }
 
-setInterval(() => { 
-    currentIndex = (currentIndex + 1) % totalImages; 
-    updateSlide(); 
-}, 3000);
+    function slideImg(index) {
+        showSlide(currentSlide + index);
+    }
+
+    btnSlides.forEach(function (btn, index) {
+        btn.addEventListener("click", function () {
+            slideImg(index);
+        });
+    });
+
+    // Automatic slideshow
+    setInterval(function () {
+        slideImg(1);
+    }, 3000); // Change slide every 3 seconds (adjust as needed)
+});
