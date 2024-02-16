@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "root"; 
 $password = ""; 
 $dbname = "ecareer";
+ 
 
 // Membuat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
