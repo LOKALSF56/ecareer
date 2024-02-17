@@ -17,25 +17,34 @@
         {
             $rows[] = $row; // Fix variable name here from $rows to $row
         }
-        return $rows;
+        return $rows; 
     }
     $list_loker =select("SELECT * FROM `loker`");
     ?>
     <header>
-        <nav class="nav-container">
+    <nav class="nav-container">
             <ul class="kiri">
             <li class="Logo">PT Mencari Cinta Sejati</li>
-                <li><a class="hitam" href="#">Lowongan</a></li>
-                <li><a class="hitam" href="#">Pengumuman</a></li>
+                <li><a class="hitam" href="../HomePage/content.php">Lowongan</a></li>
             </ul>
             <ul class="kanan">
+                <?php
+                session_start();
+                if(isset($_POST["logout"]))
+                {
+                    session_destroy();
+                }?>
                 <li>
                     <a href="#">Akun</a>
                     <ul class="dropdown">
-                        <li><a class="hitam" href="#">Login</a></li>
-                        <li><a class="hitam" href="#">Mendaftar</a></li>
+                        <li><a class="Login" href="../Login Rekruter/content.php">Login</a></li>
+                        <li><a class="Regis" href="#">Mendaftar</a></li>
+                        <li><form action="content.php" method="POST">
+                            <button type="submit" value="login" name="logout">Logout</button>
+                            </form></li>
                     </ul>
                 </li>
+            </form>
             </ul>
         </nav>
     </header>
@@ -76,7 +85,7 @@
                 <td><?= $loker["NAMA_Loker"]; ?></td>
                 <td><?= $loker["Desc_Loker"]; ?></td>
                 <td>
-                    <input class="Lamar" type="button" value="Lamar">
+                    <input class="Lamar" type="submit" value="Lamar">
                 </td>
             </tr>
          <?php endforeach; ?>

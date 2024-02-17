@@ -51,6 +51,23 @@ body
 {
     color: rgb(255, 0, 0);
 }
+.kanan li ul.dropdown li button
+{
+    border: none;
+    background: none;
+    font-weight: bold;
+    outline: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+}
+.kanan li ul.dropdown li button:hover
+{
+    color: rgb(255, 0, 0);
+}
 .kanan li ul.dropdown li
 {
     display: block;
@@ -63,7 +80,7 @@ body
     padding: 20px 20px;
     outline: 1px;
     font-weight: bold;
-    z-index: 99;
+    z-index: 1000;
 }
 .kanan li:hover ul.dropdown
 {

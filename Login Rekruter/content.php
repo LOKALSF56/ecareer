@@ -5,23 +5,22 @@
     </head>
     <body>
     <header>
-        <nav class="nav-container">
+    <nav class="nav-container">
             <ul class="kiri">
             <li class="Logo">PT Mencari Cinta Sejati</li>
-                <li><a class="home" href="#">Home</a></li>
-                <li><a class="hitam" href="#">Lowongan</a></li>
-                <li><a class="hitam" href="#">Pengumuman</a></li>
+                <li><a class="hitam" href="../HomePage/content.php">Lowongan</a></li>
             </ul>
             <ul class="kanan">
                 <li>
                     <a href="#">Akun</a>
                     <ul class="dropdown">
-                        <li><a class="Login" href="#">Login</a></li>
+                        <li><a class="Login" href="../Login Rekruter/content.php">Login</a></li>
                         <li><a class="Regis" href="#">Mendaftar</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
+    </header>
     </header>
     <div class ="center">
         <form action="content.php" method="POST">
@@ -64,7 +63,7 @@
                     <span></span>
                     <label>Password</label>
                 </div>
-                <label for="rememberMe">Tetap Masuk:</label>
+                <a class="ForgotPass" href="#">Lupa Password?</a>
                 <input type="checkbox" id="rememberMe" name="rememberMe">
                 <button type="submit" value="login" name="login" >Login</button>
             </form>
