@@ -1,31 +1,29 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = ""; // Password MySQL Anda
+$username = "root"; 
+$password = ""; 
 $dbname = "ecareer";
 
-// Membuat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Memeriksa koneksi
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Koneksi ke database gagal: " . $conn->connect_error);
 }
 
-// Query untuk mengambil data pengguna
-$sql = "SELECT username, email FROM users";
-$result = $conn->query($sql);
+$EMAIL = $_POST['EMAIL'];
+$PASSWORD = $_POST['PASSWORD'];
+$NAMA_LENGKAP = $_POST['NAMA_LENGKAP'];
+$NOKTP = $_POST['NOKTP'];
+$NOHP = $_POST['NOHP'];
 
-$users = array();
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $users[] = $row;
-    }
+$sql = "INSERT INTO datadiri (EMAIL, PASSWORD, NAMA_LENGKAP, NOKTP, NOHP)
+VALUES ('$EMAIL', '$PASSWORD', '$NAMA_LENGKAP', '$NOKTP', '$NOHP')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Data berhasil disimpan";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
-// Mengembalikan data dalam format JSON
-header('Content-Type: application/json');
-echo json_encode($users);
-
+header("Location: ../HomePage/content.php");
 $conn->close();
 ?>

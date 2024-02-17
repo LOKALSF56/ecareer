@@ -38,7 +38,7 @@
                     <a href="#">Akun</a>
                     <ul class="dropdown">
                         <li><a class="Login" href="../Login Rekruter/content.php">Login</a></li>
-                        <li><a class="Regis" href="#">Mendaftar</a></li>
+                        <li><a class="Regis" href="../Data Diri/content.php">Mendaftar</a></li>
                         <li><form action="content.php" method="POST">
                             <button type="submit" value="login" name="logout">Logout</button>
                             </form></li>
@@ -85,8 +85,7 @@
                 <td><?= $loker["NAMA_Loker"]; ?></td>
                 <td><?= $loker["Desc_Loker"]; ?></td>
                 <td>
-                    <input class="Lamar" type="submit" value="Detail"href="">
-                    <a href="export.php"><button class="download" type="submit">Download</button></a>
+                <a href="../Loker/index.php"><button class="detail" type="detail">Details</button></a>
                 </td>
             </tr>
          <?php endforeach; ?>
