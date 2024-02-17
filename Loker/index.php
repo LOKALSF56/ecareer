@@ -27,7 +27,7 @@ $list_loker =select("SELECT * FROM `loker`");
     <header>
       <nav class="navbar">
         <div class="logo">
-          <a href="index.html">
+          <a href="../HomePage/content.php">
             PT Mencari Cinta Sejati
           </a>
         </div>

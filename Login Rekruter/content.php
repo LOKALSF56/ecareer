@@ -15,7 +15,7 @@
                     <a href="#">Akun</a>
                     <ul class="dropdown">
                         <li><a class="Login" href="../Login Rekruter/content.php">Login</a></li>
-                        <li><a class="Regis" href="#">Mendaftar</a></li>
+                        <li><a class="Regis" href="../Data Diri/content.php">Mendaftar</a></li>
                     </ul>
                 </li>
             </ul>
@@ -63,6 +63,7 @@
                     <span></span>
                     <label>Password</label>
                 </div>
+                <p>Belum Punya Akun?<a class="hitam" href="../Data Diri/content.php">Klik Disini!</a></p>
                 <button type="submit" value="login" name="login" >Login</button>
             </form>
     </div>

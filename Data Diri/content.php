@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    session_start();
+    if(isset($_SESSION["is_login"]))
+    {
+    header('Location: ../HomePage/content.php');   
+    }?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +15,21 @@
 </head>
 
 <body>
-
+<nav class="nav-container">
+            <ul class="kiri">
+            <li class="Logo">PT Mencari Cinta Sejati</li>
+                <li><a class="hitam" href="../HomePage/content.php">Lowongan</a></li>
+            </ul>
+            <ul class="kanan">
+                <li>
+                    <a href="#">Akun</a>
+                    <ul class="dropdown">
+                        <li><a class="Login" href="../Login Rekruter/content.php">Login</a></li>
+                    </ul>
+                </li>
+            </form>
+            </ul>
+        </nav>
     <div class="container">
         <h2>Form Data Diri</h2>
         <form method="POST" action="process.php" enctype="multipart/form-data">
@@ -34,7 +53,7 @@
     </div>
 
     <footer>
-        &copy; 2024 PT Mencari Cinta Sejati, Design by Kelompok 6 Pweb
+        <p>Copyright @ 2024 PT Mencari Cinta Sejati, Designed by Kelompok 6 Pweb</p>
     </footer>
 
 </body>

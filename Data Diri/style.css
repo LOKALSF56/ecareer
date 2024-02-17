@@ -1,16 +1,95 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+body
+{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column ;
+    scroll-behavior: smooth;
     box-sizing: border-box;
 }
+.nav-container
+{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+li[class="Logo"]
+{
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
 
+}
+.kiri
+{
+    list-style-type: none;
+}
+.kanan
+{
+    padding: 0px 150px;
+    list-style-type: none;
+}
+.kiri li,.kanan li
+{
+    display: inline-block;
+}
+.kiri li a, .kanan li a
+{
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+}
+.kiri li a.hitam
+{
+    color: rgb(255, 255, 255);
+}
+.kiri li a:hover, .kanan li a:hover
+{
+    color: rgb(255, 0, 0);
+}
+.kanan li ul.dropdown li button
+{
+    border: none;
+    background: none;
+    font-weight: bold;
+    outline: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+}
+.kanan li ul.dropdown li button:hover
+{
+    color: rgb(255, 0, 0);
+}
+.kanan li ul.dropdown li
+{
+    display: block;
+}
+.kanan li ul.dropdown
+{
+    background: rgb(0, 0, 0);
+    position: absolute;
+    display: none;
+    padding: 20px 20px;
+    outline: 1px;
+    font-weight: bold;
+    z-index: 1000;
+}
+.kanan li:hover ul.dropdown
+{
+    display: block;
+}
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    margin: 1% 30% 0 30% ;
     background-color: #fff;
-    padding: 20px;
+    padding: 0 px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -39,9 +118,11 @@ input[type="submit"]:hover {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
     background-color: #333;
     color: white;
+    padding: 10px 0;
 }

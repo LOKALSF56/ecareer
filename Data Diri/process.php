@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "ecareer";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Koneksi ke database gagal: " . $conn->connect_error);
-}
+include "../koneksiDB/koneksi.php";
 
 $EMAIL = $_POST['EMAIL'];
 $PASSWORD = $_POST['PASSWORD'];
