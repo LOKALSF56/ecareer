@@ -85,7 +85,8 @@
                 <td><?= $loker["NAMA_Loker"]; ?></td>
                 <td><?= $loker["Desc_Loker"]; ?></td>
                 <td>
-                    <input class="Lamar" type="submit" value="Lamar">
+                    <input class="Lamar" type="submit" value="Detail"href="">
+                    <a href="export.php"><button class="download" type="submit">Download</button></a>
                 </td>
             </tr>
          <?php endforeach; ?>

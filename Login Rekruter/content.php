@@ -63,8 +63,6 @@
                     <span></span>
                     <label>Password</label>
                 </div>
-                <a class="ForgotPass" href="#">Lupa Password?</a>
-                <input type="checkbox" id="rememberMe" name="rememberMe">
                 <button type="submit" value="login" name="login" >Login</button>
             </form>
     </div>

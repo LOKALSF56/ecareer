@@ -248,7 +248,7 @@ input[class="Lamar"]
     outline: none;
     cursor: pointer;
 }
-input[class="Detail"]
+button
 {
     height: 30px;
     border: none;
